@@ -48,10 +48,10 @@ with open(PyPoll_csv, 'r') as pollfile:
 #Candidate's Precent of the Vote
 Overall_Votes = len(Votes)
 
-Can1_Percent = '{:.3f}'.format(round(((Total_Votes1/Overall_Votes) * 100), 3))
-Can2_Percent = '{:.3f}'.format(round(((Total_Votes2/Overall_Votes) * 100), 3))
-Can3_Percent = '{:.3f}'.format(round(((Total_Votes3/Overall_Votes) * 100), 3))
-Can4_Percent = '{:.3f}'.format(round(((Total_Votes4/Overall_Votes) * 100), 3))
+Can1_Percent = '{:.3f}'.format(round((Total_Votes1/Overall_Votes) * 100))
+Can2_Percent = '{:.3f}'.format(round((Total_Votes2/Overall_Votes) * 100))
+Can3_Percent = '{:.3f}'.format(round((Total_Votes3/Overall_Votes) * 100))
+Can4_Percent = '{:.3f}'.format(round((Total_Votes4/Overall_Votes) * 100))
 
 
 #Calculate the Winner
