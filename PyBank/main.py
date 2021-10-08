@@ -75,12 +75,12 @@ print(f'Total Months: {len(Months)}')
 print(f'Total: ${Ttl_ProfitLosses}')
 print(f'Average Change: ${Average}')
 print(f'Greatest Increase in Profits: {Max_Date} (${Maximum})')
-print(f'Greatest Increase in Profits: {Min_Date} (${Minimum})')
+print(f'Greatest Decrease in Profits: {Min_Date} (${Minimum})')
 
 Total = len(Months)
 
 #Write into File
-output_bankfile = os.path.join("bankfile.csv")
+output_bankfile = os.path.join('Analysis', 'bankfile.csv').replace("\\", "/")
 with open(output_bankfile, 'w') as final_bankfile:
     writer = csv.writer(final_bankfile)
 
@@ -90,5 +90,5 @@ with open(output_bankfile, 'w') as final_bankfile:
     writer.writerow([f'Total: ${Ttl_ProfitLosses}'])
     writer.writerow([f'Average Change: ${Average}'])
     writer.writerow([f'Greatest Increase in Profits: {Max_Date} (${Maximum})'])
-    writer.writerow([f'Greatest Increase in Profits: {Min_Date} (${Minimum})'])
+    writer.writerow([f'Greatest Decrease in Profits: {Min_Date} (${Minimum})'])
 

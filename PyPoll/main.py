@@ -81,7 +81,7 @@ print("---------------------------")
 print(f"Winner: {Winner}")
 
 #Write into File
-output_pollfile = os.path.join("pollfile.csv")
+output_pollfile = os.path.join('Analysis', 'pollfile.csv').replace("\\", "/")
 with open(output_pollfile, 'w') as final_pollfile:
     writer = csv.writer(final_pollfile)
 
