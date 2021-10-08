@@ -67,7 +67,6 @@ Min_Date = Months[Min_Index]
 Profit_Change.pop(0)
 Average = round(int(sum(Profit_Change)) / int(len(Profit_Change)), 2)
         
-
         
 #Print Statements
 print('Finanacial Analysis')
@@ -77,4 +76,19 @@ print(f'Total: ${Ttl_ProfitLosses}')
 print(f'Average Change: ${Average}')
 print(f'Greatest Increase in Profits: {Max_Date} (${Maximum})')
 print(f'Greatest Increase in Profits: {Min_Date} (${Minimum})')
+
+Total = len(Months)
+
+#Write into File
+output_bankfile = os.path.join("bankfile.csv")
+with open(output_bankfile, 'w') as final_bankfile:
+    writer = csv.writer(final_bankfile)
+
+    writer.writerow(['Finanacial Analysis'])
+    writer.writerow(['---------------------------------------------'])
+    writer.writerow([f'Total Months: {Total}'])
+    writer.writerow([f'Total: ${Ttl_ProfitLosses}'])
+    writer.writerow([f'Average Change: ${Average}'])
+    writer.writerow([f'Greatest Increase in Profits: {Max_Date} (${Maximum})'])
+    writer.writerow([f'Greatest Increase in Profits: {Min_Date} (${Minimum})'])
 

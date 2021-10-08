@@ -18,7 +18,6 @@ Total_Votes4 = 0
 Prct_Votes = []
 
 
-
 #Open File
 with open(PyPoll_csv, 'r') as pollfile:
     csv_reader = csv.reader(pollfile, delimiter=',')
@@ -66,6 +65,9 @@ else:
     Winner = "O'Tooley"
 
 
+#
+
+
 #Print Statements
 print("Election Results")
 print("---------------------------")
@@ -78,5 +80,20 @@ print(f"O'Tooley: {Can4_Percent}% ({Total_Votes4})")
 print("---------------------------")
 print(f"Winner: {Winner}")
 
+#Write into File
+output_pollfile = os.path.join("pollfile.csv")
+with open(output_pollfile, 'w') as final_pollfile:
+    writer = csv.writer(final_pollfile)
+
+    writer.writerow(["Election Results"])
+    writer.writerow(["---------------------------"])
+    writer.writerow([f'Total Votes: {len(Votes)}'])
+    writer.writerow(["---------------------------"])
+    writer.writerow([f"Khan: {Can1_Percent}% ({Total_Votes1})"])
+    writer.writerow([f"Correy: {Can2_Percent}% ({Total_Votes2})"])
+    writer.writerow([f"Li: {Can3_Percent}% ({Total_Votes3})"])
+    writer.writerow([f"O'Tooley: {Can4_Percent}% ({Total_Votes4})"])
+    writer.writerow(["---------------------------"])
+    writer.writerow([f"Winner: {Winner}"])
 
 
