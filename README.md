@@ -1,6 +1,6 @@
 # Python_Challenge
 
-## Background
+## Overview
 
 This project looks at two data sets, one on the financial records of a company and another on the voting outcome of a small town. The first part uses the financial data collected from the company to analyze changes in profits and losses over given periods of time. The second part creates a script to more efficiently count and total votes to conclude who won the election.
 
