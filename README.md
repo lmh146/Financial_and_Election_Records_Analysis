@@ -1,4 +1,4 @@
-# Bank_and_Election_Records_Analysis
+# Financial_and_Election_Records_Analysis
 
 ## Overview
 
